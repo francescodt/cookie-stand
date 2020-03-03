@@ -15,7 +15,7 @@ var storeOne = {
     setCustomers: function () {
         var total = 0;
         for (var i = 0; i < hours.length; i++) {
-            var hourly = Math.floor(randomCustomer(this.minCustomers, this.maxCustomer) * this.avgCookies);
+            var hourly = Math.floor(randomCustomer(this.minCustomers, this.maxCustomers) * this.avgCookies);
             this.cookies.push(`${hours[i]}: ${hourly}`);
             total += hourly;
         }
@@ -37,7 +37,7 @@ var storeTwo = {
     setCustomers: function () {
         var total = 0;
         for (var i = 0; i < hours.length; i++) {
-            var hourly = Math.floor(randomCustomer(this.minCustomers, this.maxCustomer) * this.avgCookies);
+            var hourly = Math.floor(randomCustomer(this.minCustomers, this.maxCustomers) * this.avgCookies);
             this.cookies.push(`${hours[i]}: ${hourly}`);
             total += hourly;
         }
@@ -45,6 +45,8 @@ var storeTwo = {
         console.log(this.cookies);
     },  
 };
+
+storeTwo.setCustomers();
 
 
 var storeThree = {
@@ -58,7 +60,7 @@ var storeThree = {
     setCustomers: function () {
         var total = 0;
         for (var i = 0; i < hours.length; i++) {
-            var hourly = Math.floor(randomCustomer(this.minCustomers, this.maxCustomer) * this.avgCookies);
+            var hourly = Math.floor(randomCustomer(this.minCustomers, this.maxCustomers) * this.avgCookies);
             this.cookies.push(`${hours[i]}: ${hourly}`);
             total += hourly;
         }
@@ -67,6 +69,7 @@ var storeThree = {
     },  
 };
 
+storeThree.setCustomers();
 
 var storeFour = {
 
@@ -79,7 +82,7 @@ var storeFour = {
     setCustomers: function () {
         var total = 0;
         for (var i = 0; i < hours.length; i++) {
-            var hourly = Math.floor(randomCustomer(this.minCustomers, this.maxCustomer) * this.avgCookies);
+            var hourly = Math.floor(randomCustomer(this.minCustomers, this.maxCustomers) * this.avgCookies);
             this.cookies.push(`${hours[i]}: ${hourly}`);
             total += hourly;
         }
@@ -88,6 +91,7 @@ var storeFour = {
     },  
 };
 
+storeFour.setCustomers();
 
 var storeFive = {
 
@@ -100,7 +104,7 @@ var storeFive = {
     setCustomers: function () {
         var total = 0;
         for (var i = 0; i < hours.length; i++) {
-            var hourly = Math.floor(randomCustomer(this.minCustomers, this.maxCustomer) * this.avgCookies);
+            var hourly = Math.floor(randomCustomer(this.minCustomers, this.maxCustomers) * this.avgCookies);
             this.cookies.push(`${hours[i]}: ${hourly}`);
             total += hourly;
         }
@@ -109,29 +113,11 @@ var storeFive = {
     },  
 };
 
-function randomCustHour(min, max) {
-    Math.floor(Math.random() * (max - min + 1) + min);
+storeFive.setCustomers();
+
+function randomCustomer(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
-
-
-
-
-// var arrayLength = timeOfDay.length;
-// var actualTime = [0];
-// var i;
-// var msg = '';
-
-// for (i = 0; i < arrayLength; i++)
-//     actualTime = (i + 1);
-
-
-
-
-
-
-
-
-
 
 
 
@@ -169,4 +155,35 @@ for(var j = 0; j < hours.length + 1; j++){
 
 }
 
+var parentElementThree = document.getElementById('dubai');
+
+for(var k = 0; k < hours.length + 1; k++){
+    var dubaiLI = document.createElement('li');
+    dubaiLI.textContent = storeThree.cookies[k];
+    parentElement.appendChild(dubaiLI);
+
+}
+
+var parentElementFour = document.getElementById('paris');
+
+for(var l = 0; l < hours.length + 1; l++){
+    var parisLI = document.createElement('li');
+    parisLI.textContent = storeFour.cookies[l];
+    parentElement.appendChild(parisLI);
+
+}
+
+var parentElementFive = document.getElementById('lima');
+
+for(var k = 0; k < hours.length + 1; k++){
+    var limaLI = document.createElement('li');
+    limaLI.textContent = storeFive.cookies[k];
+    parentElement.appendChild(limaLI);
+
+}
+
 console.log(storeOne.cookies);
+console.log(storeTwo.cookies);
+console.log(storeThree.cookies);
+console.log(storeFour.cookies);
+console.log(storeFive.cookies);
