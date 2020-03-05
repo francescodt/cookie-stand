@@ -37,7 +37,7 @@ var paris = new Stores('Paris', 20, 38, 2.3);
 var lima = new Stores('Lima', 2, 16, 4.6);
 
 
-var storesTable = document.getElementById('cookie-data');
+var storesTable = document.getElementById('sales');
 var tableRow = document.createElement('tr');
 var firstCell = document.createElement('td');
 firstCell.textContent = 'blubber';
