@@ -2,5 +2,54 @@
     margin: 0;
     font-size: 20 px;
     list-style: none;
+    padding: 30px;
+    color: #540000;
 }
 
+header {
+    text-align: center;
+    font-size: 30px;
+    height: 90px;
+    display: inline-block;
+
+}
+
+.headerfloat {
+    float: right;
+    
+}
+
+body {
+    width: 100%;
+    background-image: radial-gradient(circle, brown 0%, salmon 100%);
+}
+
+
+table, th, td {
+    border: 1px solid white;
+    text-align: center;
+
+  }
+
+th, td {
+    padding: 10px;
+
+}
+
+footer {
+    bottom: 0px;
+    text-align: center;
+    height: 60px;
+    outline: 3px solid brown;
+    clear: both;
+
+}
+
+ img {
+    /* width: 50%; */
+
+} 
+
+main {
+    margin-top: 100px;
+}
