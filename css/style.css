@@ -1,32 +1,74 @@
 * {
     margin: 0;
     font-size: 20 px;
-    list-style: none;
     padding: 30px;
-    color: #540000;
-}
-
-header {
-    text-align: center;
-    font-size: 30px;
-    height: 90px;
-    display: inline-block;
+    color: whitesmoke;
+    box-sizing: border-box;
 
 }
 
-.headerfloat {
-    float: right;
     
-}
-
 body {
     width: 100%;
     background-image: radial-gradient(circle, brown 0%, salmon 100%);
+
+}
+
+/* ----------------------- */
+/* ------- Header -------- */
+/* ----------------------- */
+header {
+    /* text-align: center; */
+    font-size: 30px;
+    height: 90px;
+    display: inline-block;
+    width: 100%;
+    height: 300px;
+    padding-top: 30px;
+
+}
+
+header h2 {
+    margin: 0;
+	padding: 30px 0 30px 60px;
+    list-style: none;
+    background-repeat: no-repeat;
+    background-size: 45px;
+	background-image: url("../images/salmon.png");
+    background-position: left center;
+    padding-right: 120px;
+    
 }
 
 
+.headerfloat {
+    float: right;
+    height: 300px;
+    
+}
+
+/* ----------------------- */
+/* --------  Main -------- */
+/* ----------------------- */
+
+main {
+    margin-top: 100px;
+}
+
+section h2 {
+    font-size: 30px;
+    text-align: center;
+    color: whitesmoke;
+    padding: 15px;
+
+}
+
+
+/* ----------------------- */
+/* ------- table --------- */
+/* ----------------------- */
 table, th, td {
-    border: 1px solid white;
+    border: 1px solid brown;
     text-align: center;
 
   }
@@ -36,20 +78,95 @@ th, td {
 
 }
 
+table {
+    text-align: center;
+    width: 97%;
+    margin: 15px;
+}
+
+.tableDiv {
+    border: 0 solid white;
+    outline-style: double;
+    padding: 10px;
+}
+
+/* ----------------------- */
+/* ------- misc --------- */
+/* ----------------------- */
+a:link {
+    text-decoration: none;
+  }
+
+
+/* ----------------------- */
+/* -------- images ------- */
+/* ----------------------- */
+header img {
+    height: 230px; 
+    width: 800px; 
+    /* text-align: center; */
+
+}
+
+
+/* ----------------------- */
+/* ------- Footer -------- */
+/* ----------------------- */
 footer {
     bottom: 0px;
     text-align: center;
     height: 60px;
-    outline: 3px solid brown;
+    outline: 3px solid whitesmoke;
     clear: both;
+    color: whitesmoke;
+    background-color: salmon;
+    padding: 15px;
 
 }
 
- img {
-    /* width: 50%; */
+/* ----------------------- */
+/* --------- Form -------- */
+/* ----------------------- */
 
-} 
-
-main {
-    margin-top: 100px;
+input {
+    padding: 2px;
+    background-color: brown;
+    margin: 2px;
 }
+
+button {
+    padding: 2px;
+
+}
+
+fieldset {
+    margin-top: 15px;
+
+}
+
+
+fieldset label {
+    width: 10%;
+
+
+}
+
+button {
+    background-color: brown;
+    margin: 5px;
+
+}
+
+#newCity {
+    border: 0 solid white;
+    outline-style: double;
+    padding: 10px;
+    margin-top: 45px;
+    
+}
+
+fieldset legend {
+    font-size: 25px;
+
+}
+
