@@ -84,34 +84,6 @@ for (var i = 0; i < storesLocations.length; i++) {
     storesLocations[i].render();
 }
 
-//Footer
-var tableFooter = document.createElement('tr');
-
-//first row
-var totalRow = document.createElement('td');
-totalRow.textContent = 'Total';
-tableFooter.appendChild(totalRow);
-
-//math total
-var hourTotal = 0;
-for (var i = 0; i < hours.length + 1; i++) {
-    hourTotal = 0;
-    for (var j = 0; j < storesLocations.length; j++) {
-        hourTotal += storesLocations[j].cookies[i];
-    }
-    var tableData = document.createElement('td');
-    tableData.textContent = hourTotal;
-    tableFooter.appendChild(tableData);
-}
-
-storesTable.appendChild(tableFooter);
-
-
-//new form stuff below //
-
-// still to do
-//call function to keep total at bottom
-
 // take in an event parameter so that we can prevent the default
 function handleFormSubmitted(event){
     event.preventDefault();
@@ -138,65 +110,26 @@ var formElement = document.getElementById('newCity');
 
 formElement.addEventListener('submit', handleFormSubmitted);
 
+//footer
+var tableFooter = document.createElement('tfoot');
 
+//total row
+var totalRow = document.createElement('td');
+totalRow.textContent = 'Total';
+tableFooter.appendChild(totalRow);
 
+//math total
+var hourTotal = 0;
+for (var i = 0; i < hours.length + 1; i++) {
+    hourTotal = 0;
+    for (var j = 0; j < storesLocations.length; j++) {
+        hourTotal += storesLocations[j].cookies[i];
+    }
+    var tableData = document.createElement('td');
+    tableData.textContent = hourTotal;
+    tableFooter.appendChild(tableData);
+}
 
+storesTable.appendChild(tableFooter);
 
-
-
-
-////////////////////////
-//add array to the constructor function
-
-// set up event listener to listen to the submit event
-//1. Which element do we need
-
-//2. Which event am I listening to?
-
-
-//3. What code should I run when that event happens?
-
-// // take in an event parameter so that we can prevent the default
-// function handleFormSubmitted(event){
-//     event.preventDefault();
-//     console.log(event);
-
-
-// var nameInput = doument.getElementById('firstsectionformanswer1')
-// var nameValue = nameInput['value'];
-// var breedInput = document.getElementById('secondsectionformanswers2');
-// var breedValue = breedInput['value'];
-// var otherInput = document.getElementById('thirdsectionformanswers3');
-// var otherValue = otherInput.value;
-// var interestsInput = document.getElementById('fourhtsectionformanswer4');
-// var interestsValue = interestsInput.value;
-
-
-// //add in checkbox values
-// var isGoodWithKids = event.target.isGoodWithKids.checked;
-// var isGoodwithDogs = event.target.isGoodwithDogs.checked;
-
-// var newPet = new newPet(nameValue, breedValue, otherValue, interestsValue, isGoodWithKids, isGoodwithDogs);
-
-//newPet.setAge();
-//newPet.render();
-//newpet.getInterests();
-
-// //add array to the constructor function
-// newPet.allPets.push(this);
-// newPet.allPets = [];
-
-
-// var form?????
-
-// }
-
-// // set up event listener to listen to the submit event
-// //1. Which element do we need
-// var formElement = document.getElementById('new-pets');
-
-// //2. Which event am I listening to?
-
-
-// //3. What code should I run when that event happens?
-// formElement.addEventListener('subtmit', handleFormSubmitted);
+ 
