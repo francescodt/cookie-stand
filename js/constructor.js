@@ -20,14 +20,15 @@ function Stores(name, minCus, maxCus, averageSales) {
 Stores.prototype.setCustomers = function () {
     var total = 0;
     for (var i = 0; i < hours.length; i++) {
-        var hourly = Math.floor(randomCus(this.minCus, this.maxCus) * this.averageSales);
-        this.cookies.push(hourly);
-        total += hourly;
+        var hour = Math.ceil(randomCus(this.minCus, this.maxCus) * this.averageSales);
+        this.cookies.push(hour);
+        total += hour;
     }
     this.cookies.push(total);
     console.log(this.cookies);
 
 }
+
 
 
 var seattle = new Stores('Seattle', 23, 65, 6.3);
