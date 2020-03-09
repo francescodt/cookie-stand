@@ -10,9 +10,9 @@ function randomCus(min, max) {
 
 function Stores(name, minCus, maxCus, averageSales) {
     this.name = name;
-    this.minCus = minCus;
-    this.maxCus = maxCus;
-    this.averageSales = averageSales;
+    this.minCus = parseInt(minCus);
+    this.maxCus = parseInt(maxCus);
+    this.averageSales = parseInt(averageSales);
     this.cookies = [];
 
 }
@@ -134,3 +134,4 @@ for (var i = 0; i < hours.length + 1; i++) {
 storesTable.appendChild(tableFooter);
 
  
+
